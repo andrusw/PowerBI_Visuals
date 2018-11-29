@@ -19,8 +19,7 @@ In cert wizard:
 Current User > Next 
 (File to Import Screen) Next 
 (Private Key Protection) Enter passphrase number into password > Next
-(Certificate Store) Place all certificates in the following store > Browse > select Trusted Root Certification Authorities > OK > Next 
-> Finish > Yes > OK
+(Certificate Store) Place all certificates in the following store > Browse > select Trusted Root Certification Authorities > OK > Next > Finish > Yes > OK
 
 ### Install D3 Library
 ```powershell
