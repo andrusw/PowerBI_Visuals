@@ -21,11 +21,7 @@ Current User > Next
 (Private Key Protection) Enter passphrase number into password > Next
 (Certificate Store) Place all certificates in the following store > Browse > select Trusted Root Certification Authorities > OK > Next > Finish > Yes > OK
 
-### Install D3 Library
-```powershell
-npm i d3@3.5.5 --save
-npm i @types/d3@3.5
-```
+
 
 
 ## Create Skelton Viz Project
@@ -45,6 +41,12 @@ Edit Report and select Developer Visual from Visualization pane
 Download VS Code if not already and start:
 ```powershell
 code .
+```
+
+### Install D3 Library into new viz
+```powershell
+npm i d3@3.5.5 --save
+npm i @types/d3@3.5
 ```
 
 ### Register d3 Library 
