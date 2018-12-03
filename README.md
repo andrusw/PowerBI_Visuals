@@ -55,9 +55,26 @@ add item in externalJS array: `,"node_modules/d3/d3.min.js"`
 
 ## Developing
 
-Visual Construction & Data Binding:  src > visual.ts
-Data Roles, Mapping and Formatting Objects: capabilities.json 
-Default starting visual settings: src > settings.ts
+Visual Construction & Data Binding:  src > visual.ts <br/>
+Data Roles, Mapping and Formatting Objects: capabilities.json <br/>
+Default starting visual settings: src > settings.ts <br/>
+
+Clean out visual.ts to look like:
+```typescript
+module powerbi.extensibility.visual {
+"use strict";
+export class Visual implements IVisual {
+
+    constructor(options: VisualConstructorOptions) {
+
+    }
+
+    public update(options: VisualUpdateOptions) {
+
+        }
+    }
+}
+```
 
 ## Packaging
 
