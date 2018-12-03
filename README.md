@@ -59,18 +59,26 @@ Visual Construction & Data Binding:  src > visual.ts <br/>
 Data Roles, Mapping and Formatting Objects: capabilities.json <br/>
 Default starting visual settings: src > settings.ts <br/>
 
-Clean out visual.ts to look like:
+Clean out visual.ts to a bare-bones start:
 ```typescript
 module powerbi.extensibility.visual {
-"use strict";
-export class Visual implements IVisual {
+    "use strict";
+    export class Visual implements IVisual {
+        private host: IVisualHost;
+        private svg: d3.Selection<SVGElement>;
+        private container: d3.Selection<SVGElement>;
+    
+        constructor(options: VisualConstructorOptions) {
+            this.svg = d3.select(options.element).append('svg').classed('testAnimation', true);
+            this.container = this.svg.append("g").classed('container', true);
 
-    constructor(options: VisualConstructorOptions) {
+        }
 
-    }
-
-    public update(options: VisualUpdateOptions) {
-
+        public update(options: VisualUpdateOptions) {
+            let width: number = options.viewport.width;
+            let height: number = options.viewport.height;
+            this.svg.attr({width: width,height: height});
+            
         }
     }
 }
